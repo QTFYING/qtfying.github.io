@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="home">
+<h1 class="page-heading">竹杖芒鞋轻胜马，谁怕，一蓑烟雨任平生...</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <span class="post-meta">
+        发贴日期: <time>{{ post.date | date: "%Y-%m-%d" }}</time> · 标签: {% for tag in post.tags %}
+        <a href="/tags/#{{ tag }}">{{ tag }}</a> {% endfor %} · 栏目:
+        <a href="/{{ post.categories }}">{{ post.categories }}</a>
+      </span>
+      <div class="post-excerpt">{{ post.excerpt }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
