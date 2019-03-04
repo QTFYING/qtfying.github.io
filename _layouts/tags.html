@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<p>
+  标签导航<br>
+  {% for tag in site.tags %}
+  <a href="#{{ tag | first }}">{{ tag | first }}</a>
+  {% endfor %}
+</p>
+{% for tag in site.tags %}
+<h3 id="{{ tag | first }}">{{ tag | first }}</h3>
+<ul>
+  {% for post in tag.last %}
+  <li>
+    {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
