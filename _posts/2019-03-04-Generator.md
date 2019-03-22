@@ -31,7 +31,7 @@ show.next() // {done: true, value: undefined}
 
 每调用一次next，则执行一次yield语句，并在该处暂停，return完成之后，就退出了生成器函数，后续如果还有yield操作就不再执行了
 
-### 2. yield和yield
+### 2. yield和yield *
 
 有时候，我们会看到yield之后跟了一个*号，它是什么，有什么用呢？
 
