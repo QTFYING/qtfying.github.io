@@ -2,7 +2,7 @@
 layout: post
 title:  "Generator生成器函数"
 date:   2019-03-21 17:22:00
-category: tips
+category: study
 tags: ES6 Generator
 comments: true
 ---
